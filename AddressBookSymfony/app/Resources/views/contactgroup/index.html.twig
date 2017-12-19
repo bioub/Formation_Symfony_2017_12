@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contactgroups list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contactGroup in contactGroups %}
+            <tr>
+                <td><a href="{{ path('groups_show', { 'id': contactGroup.id }) }}">{{ contactGroup.id }}</a></td>
+                <td>{{ contactGroup.name }}</td>
+                <td>{{ contactGroup.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('groups_show', { 'id': contactGroup.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

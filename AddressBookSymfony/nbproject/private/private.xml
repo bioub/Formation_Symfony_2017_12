@@ -3,8 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Formation_ZF1_MonCoyote_2016_11">
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/app/Resources/views/base.html.twig</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/web/app_dev.php</file>
             <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/web/app.php</file>
-            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/.gitignore</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Entity/Contact.php</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Resources/views/Contact/list.html.twig</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Entity/ContactGroup.php</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/app/config/routing.yml</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Controller/ContactController.php</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Resources/views/Company/list.html.twig</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/app/config/config_prod.yml</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/app/AppKernel.php</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Controller/CompanyController.php</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/src/AppBundle/Resources/views/Company/show.html.twig</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/app/config/config.yml</file>
+            <file>file:/Users/romain/Desktop/Formation_Symfony_2017_12/AddressBookSymfony/app/config/config_dev.yml</file>
         </group>
     </open-files>
 </project-private>

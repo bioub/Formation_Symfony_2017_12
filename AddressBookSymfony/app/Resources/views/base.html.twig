@@ -18,11 +18,33 @@
                 <a class="nav-link" href="{{ path('app_contact_list') }}">Contacts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Companies</a>
+                <a class="nav-link" href="{{ path('app_company_list') }}">Companies</a>
             </li>
+            {% block nav %}{% endblock %}
+        </ul>
+        <ul class="navbar-nav flex-row ml-md-auto">
+            {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_security_login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Register</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Logout</a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
     <div class="container-fluid mt-3">
+
+        {% for msg in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ msg }}
+        </div>
+        {% endfor %}
+
         {% block body %}{% endblock %}
     </div>
 {% block javascripts %}{% endblock %}

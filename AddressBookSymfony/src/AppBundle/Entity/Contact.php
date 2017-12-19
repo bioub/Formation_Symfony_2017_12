@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Contact
@@ -20,35 +21,44 @@ class Contact
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=40)
+     * @Assert\NotBlank(message="Le prénom est obligatoire")
      */
-    private $prenom;
+    protected $prenom;
 
     /**
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=40)
+     * @Assert\NotBlank()
      */
-    private $nom;
+    protected $nom;
 
     /**
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=80, nullable=true)
+     * @Assert\Email(strict=true)
      */
-    private $email;
+    protected $email;
 
     /**
      * @var string
      *
      * @ORM\Column(name="telephone", type="string", length=20, nullable=true)
      */
-    private $telephone;
+    protected $telephone;
+
+    /**
+     * @var Company
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Company")
+     */
+    protected $societe;
 
     public function setId($id)
     {
@@ -162,4 +172,28 @@ class Contact
         return $this->telephone;
     }
 
+
+    /**
+     * Set societe
+     *
+     * @param \AppBundle\Entity\Company $societe
+     *
+     * @return Contact
+     */
+    public function setSociete(\AppBundle\Entity\Company $societe = null)
+    {
+        $this->societe = $societe;
+
+        return $this;
+    }
+
+    /**
+     * Get societe
+     *
+     * @return \AppBundle\Entity\Company
+     */
+    public function getSociete()
+    {
+        return $this->societe;
+    }
 }

@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}{{ company.name }} - AddressBook{% endblock %}
+
+{% block body %}
+
+    <h2>{{ company.name }}</h2>
+
+    {% if company.city %}
+    <p>Ville : {{ company.city }}</p>
+    {% endif %}
+
+{% endblock %}

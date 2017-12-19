@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Liste des sociétés{% endblock %}
+
+{% block body %}
+    <h2>Liste des sociétés</h2>
+    <ul>
+        {% for c in companies %}
+        <li>
+            <a href="{{ path('app_company_show', {'id': c.id}) }}">{{ c.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        <a href="{{ path('app_company_add') }}" class="btn btn-primary">
+            Ajouter une société
+        </a>
+    </p>
+{% endblock %}
+
+
+{% block nav %}
+    {#<li class="nav-item">
+        <a class="nav-link" href="#">Seulement sur Company</a>
+    </li>#}
+{% endblock %}
